@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import os
 import cv2
 import random
@@ -33,13 +32,13 @@ def create_training_data():
 
 
 create_training_data()
+
 X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE,1)
+
+
 
 np.save('features.npy',X)
 np.save('labels.npy',Y)
 X=np.load('features.npy')
 Y=np.load('labels.npy')
 
-print(len(training_data))
-print(X.shape)
-print(len(Y))

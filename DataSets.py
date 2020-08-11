@@ -95,7 +95,7 @@ def get_csv_data(numberDataSet, rollingDays, isRandom):
         X.append(np.array(dfSubset))
 
 
-    X = np.array(X).reshape(-1, X[0].shape[0], X[0].shape[1])
+    X = np.array(X).reshape(-1, X[0].shape[0], X[0].shape[1],1)
     #X = np.array(X).reshape(-1, X[0].shape[0], X[0].shape[1],1) Falls ein X[i] Datensatz mehrere Spalten hat
 
     X = tf.keras.utils.normalize(X, axis=1)
